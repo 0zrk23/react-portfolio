@@ -7,11 +7,11 @@ import Typography from '@mui/material/Typography';
 import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
-import Avatar from '@mui/material/Avatar';
+// import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
-import AdbIcon from '@mui/icons-material/Adb';
+// import AdbIcon from '@mui/icons-material/Adb';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircleNodes, faNetworkWired } from '@fortawesome/free-solid-svg-icons';
@@ -21,7 +21,7 @@ import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
 const linkStyle = {textDecoration: 'none', color: '#354d80'}
 
 const pages = ['Home', 'About', 'Portfolio','Contact'];
-const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
+// const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 const links = ['LinkedIn Profile','Github Profile']
 const linkUrl = [
     'https://www.linkedin.com/in/gustavo-carrillo-1a9141257/',
@@ -31,16 +31,16 @@ const networkIcons = [faLinkedin,faGithub];
 
 function Navbar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
-  const [anchorElUser, setAnchorElUser] = React.useState(null);
+  // const [anchorElUser, setAnchorElUser] = React.useState(null);
   const [anchorElNetwork, setAnchorElNetwork] = React.useState(null);
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
   };
 
-  const handleOpenUserMenu = (event) => {
-    setAnchorElUser(event.currentTarget);
-  };
+  // const handleOpenUserMenu = (event) => {
+  //   setAnchorElUser(event.currentTarget);
+  // };
 
   const handleOpenNetworkMenu = (event) => {
     setAnchorElNetwork(event.currentTarget);
@@ -50,9 +50,9 @@ function Navbar() {
     setAnchorElNav(null);
   };
 
-  const handleCloseUserMenu = () => {
-    setAnchorElUser(null);
-  };
+  // const handleCloseUserMenu = () => {
+  //   setAnchorElUser(null);
+  // };
 
   const handleCloseNetworkMenu = () => {
     setAnchorElNetwork(null);
@@ -71,7 +71,7 @@ function Navbar() {
             variant="h6"
             noWrap
             component="a"
-            href="/"
+            // href="/"
             sx={{
               mr: 2,
               display: { xs: 'none', md: 'flex' },
@@ -203,7 +203,7 @@ function Navbar() {
               >
                 {links.map((link,key) => (
                     <MenuItem key={key} onClick={handleCloseNetworkMenu}>
-                      <a style={linkStyle} href={linkUrl[key]} target="_blank">
+                      <a style={linkStyle} href={linkUrl[key]} rel="noreferrer" target="_blank">
                         {links[key]}
                       </a>
                     </MenuItem>
