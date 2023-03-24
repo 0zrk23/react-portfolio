@@ -1,10 +1,11 @@
 // import { Home, Route } from "@mui/icons-material";
 import { Routes, Route } from "react-router-dom";
 import Navbar from "./Components/Navbar";
-import { Home } from "./pages/Home";
-import { About } from "./pages/About";
-import { Contact } from "./pages/Contact";
-import { Portfolio } from "./pages/Portfolio";
+// import { Home } from "./pages/Home";
+// import { About } from "./pages/About";
+// import { Contact } from "./pages/Contact";
+// import { Portfolio } from "./pages/Portfolio";
+import {Home,About,Portfolio,Contact} from "./pages"
 import { ThemeProvider } from "@emotion/react";
 import { createTheme, CssBaseline } from "@mui/material";
 
