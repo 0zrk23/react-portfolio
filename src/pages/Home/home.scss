@@ -25,7 +25,7 @@ $color5: #477CC3;
   // justify-content: center;
   background: linear-gradient(to bottom right, $secondary,$color5);
   padding-left: 10px;
-  height: 750px;
+  height: 800px;
 }
 
 .text-container{
@@ -37,6 +37,8 @@ $color5: #477CC3;
   // height: 750px;
   // border: 1px dashed black;
   // margin-left: 10px
+  padding-left: 10px;
+  // opacity: 0;
 }
 
 .description{
@@ -55,14 +57,7 @@ $color5: #477CC3;
   // border: 1px dashed black;
 }
 
-.work-container{
-  
-}
-
 @media screen and (min-width: 1200px) {
-  .home-container{
-
-  }
   .intro{
     flex-direction: row;
   }
