@@ -1,13 +1,14 @@
 // import { Home, Route } from "@mui/icons-material";
 import { Routes, Route } from "react-router-dom";
-import Navbar from "./Components/Navbar";
+import Navbar from "./Components/Navbar/Navbar";
 // import { Home } from "./pages/Home";
 // import { About } from "./pages/About";
 // import { Contact } from "./pages/Contact";
 // import { Portfolio } from "./pages/Portfolio";
-import {Home,About,Portfolio,Contact} from "./pages"
+import {Home,About,Contact} from "./pages"
 import { ThemeProvider } from "@emotion/react";
 import { createTheme, CssBaseline } from "@mui/material";
+// import { Home } from "./pages/Home/Home";
 
 
 
@@ -19,16 +20,16 @@ function App() {
         main: '#fcfcfc'
       },
       secondary:{
-        main: '#354d80'
+        main: '#171C42'
       },
       color3:{
-        main: '#3d6092'
+        main: '#273c6d'
       },
       color4:{
-        main: '#4573a5'
+        main: '#375c98'
       },
       color5: {
-        main: '#4e86b8'
+        main: '#477cc3'
       }
     }
   })
@@ -39,7 +40,6 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />}/>
         <Route path="/About" element={<About />}/>
-        <Route path="/Portfolio" element={<Portfolio />}/>
         <Route path="/Contact" element={<Contact />}/>
       </Routes>
     </ThemeProvider>
