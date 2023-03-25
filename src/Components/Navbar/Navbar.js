@@ -14,7 +14,7 @@ import MenuItem from '@mui/material/MenuItem';
 // import AdbIcon from '@mui/icons-material/Adb';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCircleNodes, faNetworkWired } from '@fortawesome/free-solid-svg-icons';
+import { faNetworkWired } from '@fortawesome/free-solid-svg-icons';
 import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
 import Morf from '../Morf/Morf';
 // import { faNetworkWired } from '@fortawesome/free-regular-svg-icons';
