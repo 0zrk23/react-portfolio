@@ -7,40 +7,32 @@ import Typography from '@mui/material/Typography';
 import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
-// import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
-// import AdbIcon from '@mui/icons-material/Adb';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCircleNodes, faNetworkWired } from '@fortawesome/free-solid-svg-icons';
+import { faNetworkWired } from '@fortawesome/free-solid-svg-icons';
 import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
-// import { faNetworkWired } from '@fortawesome/free-regular-svg-icons';
+import Morf from '../Morf/Morf';
 
-const linkStyle = {textDecoration: 'none', color: '#354d80'}
+const linkStyle = {textDecoration: 'none', color: '#273c6d'}
 
-const pages = ['Home', 'About', 'Portfolio','Contact'];
-// const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
+const pages = ['Home', 'About','Contact'];
 const links = ['LinkedIn Profile','Github Profile']
 const linkUrl = [
-    'https://www.linkedin.com/in/gustavo-carrillo-1a9141257/',
-    'https://github.com/0zrk23'
+  'https://www.linkedin.com/in/gustavo-carrillo-1a9141257/',
+  'https://github.com/0zrk23'
 ];
 const networkIcons = [faLinkedin,faGithub];
 
 function Navbar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
-  // const [anchorElUser, setAnchorElUser] = React.useState(null);
   const [anchorElNetwork, setAnchorElNetwork] = React.useState(null);
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
   };
-
-  // const handleOpenUserMenu = (event) => {
-  //   setAnchorElUser(event.currentTarget);
-  // };
 
   const handleOpenNetworkMenu = (event) => {
     setAnchorElNetwork(event.currentTarget);
@@ -50,10 +42,6 @@ function Navbar() {
     setAnchorElNav(null);
   };
 
-  // const handleCloseUserMenu = () => {
-  //   setAnchorElUser(null);
-  // };
-
   const handleCloseNetworkMenu = () => {
     setAnchorElNetwork(null);
   }
@@ -62,26 +50,25 @@ function Navbar() {
     <AppBar position="static">
       <Container maxWidth="2xl" >
         <Toolbar disableGutters >
-          {/* <AdbIcon color='secondary'  sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} /> */}
-          <Box sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }}>
-            <FontAwesomeIcon icon={faCircleNodes} style={{color: "#354d80"}}/>
+          <Box sx={{ display: { xs: 'none', md: 'flex' , justifyContent: 'center', alignItems: 'center'}, mr: 1 }}>
+            <div style={{marginBottom:'10%'}}>
+              <Morf scale='15px' duration='20' border='2px solid #273c6d'/>
+            </div>
           </Box>
           <Typography
             
             variant="h6"
             noWrap
             component="a"
-            // href="/"
             sx={{
               mr: 2,
               display: { xs: 'none', md: 'flex' },
               fontFamily: 'monospace',
               fontWeight: 700,
               letterSpacing: '.3rem',
-            //   color: 'inherit',
+              color: '#273c6d',
               textDecoration: 'none',
             }}
-            color='secondary'
           >
             REACT PORTFOLIO
           </Typography>
@@ -95,7 +82,7 @@ function Navbar() {
               onClick={handleOpenNavMenu}
               color="inherit"
             >
-              <MenuIcon color='secondary' />
+              <MenuIcon color='color3' />
             </IconButton>
             <Menu
               id="menu-appbar"
@@ -118,18 +105,18 @@ function Navbar() {
               {pages.map((page,key) => (
                 <Link key={`${key}`} style={linkStyle} to={page !== 'Home'? `/${page}`:'/'}>
                     <MenuItem key={page} onClick={handleCloseNavMenu}>
-                        <Typography textAlign="center" color='secondary'>{page}</Typography>
+                        <Typography textAlign="center" color='color3'>{page}</Typography>
                     </MenuItem>
                 </Link>
               ))}
             </Menu>
           </Box>
-          {/* <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} /> */}
-          <Box sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }}>
-            <FontAwesomeIcon icon={faCircleNodes} style={{color: "#354d80"}}/>
+          <Box sx={{ display: { xs: 'flex', md: 'none', justifyContent: 'center', alignItems: 'center'}, mr: 1 }}>
+            <div style={{marginBottom:'10%'}}>
+              <Morf scale='15px' duration='20' border='2px solid #273c6d'/>
+            </div>
           </Box>
           <Typography
-            color='secondary'
             variant="h5"
             noWrap
             component="a"
@@ -141,7 +128,7 @@ function Navbar() {
               fontFamily: 'monospace',
               fontWeight: 700,
               letterSpacing: '.3rem',
-            //   color: 'inherit',
+              color: '#273c6d',
               textDecoration: 'none',
             }}
           >
@@ -149,17 +136,16 @@ function Navbar() {
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page,key) => (
-                <Link key={`${key}`} style={linkStyle} to={page !== 'Home'? `/${page}`:'/'}>
-                    <Button
-                        key={page}
-                        onClick={handleCloseNavMenu}
-                        sx={{ my: 2, display: 'block' }}
-                        color='secondary'
-                    >
-                        {page}
-                    </Button>
-                </Link>
-                
+              <Link key={`${key}`} style={linkStyle} to={page !== 'Home'? `/${page}`:'/'}>
+                <Button
+                  key={page}
+                  onClick={handleCloseNavMenu}
+                  sx={{ my: 2, display: 'block' }}
+                  color='color3'
+                >
+                  {page}
+                </Button>
+              </Link>
             ))}
           </Box>
   
@@ -211,36 +197,6 @@ function Navbar() {
                 )}
               </Menu>
             </Box>
-
-          {/* <Box sx={{ flexGrow: 0 }}>
-            <Tooltip title="Open settings">
-              <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
-              </IconButton>
-            </Tooltip>
-            <Menu
-              sx={{ mt: '45px' }}
-              id="menu-appbar"
-              anchorEl={anchorElUser}
-              anchorOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
-              }}
-              open={Boolean(anchorElUser)}
-              onClose={handleCloseUserMenu}
-            >
-              {settings.map((setting) => (
-                <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Typography textAlign="center">{setting}</Typography>
-                </MenuItem>
-              ))}
-            </Menu>
-          </Box> */}
         </Toolbar>
       </Container>
     </AppBar>
