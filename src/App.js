@@ -1,11 +1,10 @@
 // import { Home, Route } from "@mui/icons-material";
 import { Routes, Route } from "react-router-dom";
 import Navbar from "./Components/Navbar/Navbar";
-// import { Home } from "./pages/Home";
-// import { About } from "./pages/About";
-// import { Contact } from "./pages/Contact";
-// import { Portfolio } from "./pages/Portfolio";
-import {Home,About,Contact} from "./pages"
+import { Home } from "./pages/Home/Home";
+import { About } from "./pages/About";
+import { Contact } from "./pages/Contact";
+// import {Home,About,Contact} from "./pages"
 import { ThemeProvider } from "@emotion/react";
 import { createTheme, CssBaseline } from "@mui/material";
 // import { Home } from "./pages/Home/Home";
@@ -33,6 +32,7 @@ function App() {
       }
     }
   })
+  // console.log(document.activeElement);
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline/>

@@ -14,7 +14,7 @@ import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faNetworkWired } from '@fortawesome/free-solid-svg-icons';
 import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
-import Morf from '../Morf/Morf';
+import Morf from '../Morf/NavbarMorf';
 
 const linkStyle = {textDecoration: 'none', color: '#273c6d'}
 
@@ -57,7 +57,7 @@ function Navbar() {
   }
 
   return (
-    <AppBar position="static">
+    <AppBar position="sticky">
       <Container maxWidth="2xl" >
         <Toolbar disableGutters >
           {/* <AdbIcon color='color3'  sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} /> */}
