@@ -15,7 +15,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faNetworkWired } from '@fortawesome/free-solid-svg-icons';
 import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
 import Morf from '../Morf/NavbarMorf';
-import { Link } from 'react-scroll';
+// import { Link } from 'react-scroll';
 
 const linkStyle = {textDecoration: 'none', color: '#273c6d'}
 
