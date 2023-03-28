@@ -1,35 +1,54 @@
-import { motion } from "framer-motion";
-// import { useRef, useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
 import './workcard.scss'
-import React, { useState, useRef } from "react";
+import { useState } from "react";
+import { WorkModal } from "../WorkModal/WorkModal";
 
-export default function WorkCard(){
-  const focusRef = useRef();
-
-  function focus(){
-    focusRef.current.focus();
-    console.log(document.activeElement);
+const cardVariants = {
+  initial:{
+    scale: 0.95,
+    opacity: 0.75
+  },
+  hover:{
+    scale: 1.0,
+    opacity: 1,
+    transition:{
+      duration: 0.15
+    }
+  },
+  tap:{
+    scale: 0.9,
+    opacity: 1,
   }
+}
+
+export default function WorkCard({work}){
+  const [modalOpen, setModalOpen] = useState(false);
+
+  const closeModal = () => setModalOpen(false);
+  const openModal = () => setModalOpen(true);
+  
 
   return (
-    <motion.div 
-      ref={focusRef}
-      className='work-card'
-      inital={{
-        scale: 0
-      }}
-      whileHover={{
-        scale: 1.02,
-        transition: {
-          
-        }
-      
-      }}
-      style={{
-        backgroundImage: 'url()'
-      }}
-      >
+    <>
+      <motion.img 
+        variants={cardVariants}
+        initial='initial'
+        whileHover='hover'
+        whileTap='tap'
+        className="web-capture" 
+        onClick={() => (modalOpen ? closeModal() : openModal()) }
 
-      </motion.div>
+        src={`${work.webCapture}`} 
+        alt=""
+      />
+      {/* {modalOpen && <WorkModal modalOpen={modalOpen} handleClose={closeModal} work={work}/>} */}
+      <AnimatePresence
+        initial={false}
+        mode='sync'
+      >
+        {modalOpen && <WorkModal modalOpen={modalOpen} handleClose={closeModal} work={work}/>}
+      </AnimatePresence>
+    </>
+    
   )
 }

@@ -15,10 +15,11 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faNetworkWired } from '@fortawesome/free-solid-svg-icons';
 import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
 import Morf from '../Morf/NavbarMorf';
+import { Link } from 'react-scroll';
 
 const linkStyle = {textDecoration: 'none', color: '#273c6d'}
 
-const pages = ['Home', 'About','Contact'];
+const pages = ['Home', 'Work', 'About','Contact'];
 // const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 const links = ['LinkedIn Profile','Github Profile']
 const linkUrl = [
@@ -92,7 +93,7 @@ function Navbar() {
             <IconButton
               size="large"
               aria-label="account of current user"
-              aria-controls="menu-appbar"
+              // aria-controls="menu-appbar"
               aria-haspopup="true"
               onClick={handleOpenNavMenu}
               color="inherit"
@@ -154,16 +155,21 @@ function Navbar() {
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page,key) => (
-                <Link key={`${key}`} style={linkStyle} to={page !== 'Home'? `/${page}`:'/'}>
+                
                     <Button
                         key={page}
                         onClick={handleCloseNavMenu}
                         sx={{ my: 2, display: 'block' }}
                         color='color3'
                     >
-                        {page}
+                        {/* <Link key={`${key}`} style={linkStyle} to={page !== 'Home'? `/${page}`:'/'}>
+                          {page}
+                        </Link> */}
+                        <a key={key} style={linkStyle} href={console.log(`#${page.toLocaleLowerCase()}`)}>
+                          {page}
+                        </a>
                     </Button>
-                </Link>
+                
                 
             ))}
           </Box>
