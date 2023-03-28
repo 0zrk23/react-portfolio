@@ -1,0 +1,27 @@
+$primary: #fcfcfc;
+$secondary: #171C42;
+$color3: #273C6D;
+$color4: #375C98;
+$color5: #477CC3;
+
+.layout{
+  display: flex;
+  flex-direction: column;
+}
+
+// .intro,
+.work-container{
+  // border-radius: 20px;
+  // height: 750px;
+  display: grid;
+  grid-template-columns: auto;
+  padding: 1rem;
+  column-gap: 1rem;
+  row-gap: 1rem;
+}
+
+@media screen and (min-width: 1200px) {
+  .work-container{
+    grid-template-columns: auto auto;
+  }
+}

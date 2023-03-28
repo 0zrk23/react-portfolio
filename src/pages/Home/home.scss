@@ -4,28 +4,16 @@ $color3: #273C6D;
 $color4: #375C98;
 $color5: #477CC3;
 
-.home-container{
-  display: flex;
-  flex-direction: column;
-  
-}
-
 // .intro,
-.work-container{
-  // border-radius: 20px;
-  // height: 750px;
-  display: grid;
-  grid-template-columns: auto;
-}
 
-.intro{
+.home{
   display: flex;
   flex-direction: column;
   // align-items: center;
   // justify-content: center;
   background: linear-gradient(to bottom right, $secondary,$color5);
   padding-left: 10px;
-  height: 750px;
+  height: 85vh;
 }
 
 .text-container{
@@ -62,11 +50,8 @@ $color5: #477CC3;
 }
 
 @media screen and (min-width: 1200px) {
-  .intro{
+  .home{
     flex-direction: row;
-  }
-  .work-container{
-    grid-template-columns: auto auto;
   }
 }
 

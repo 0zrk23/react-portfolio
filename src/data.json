@@ -1,0 +1,50 @@
+[
+    {
+      "webCapture": "./work/my-menu.png",
+      "title": "My Menu",
+      "description": "This web application can search for a recipe and saves recipies to a user when logged in",
+      "technologyUsed": ["Sequelize","MySQL","Express","Express-Handlebars"],
+      "app": "https://my-menu.herokuapp.com/",
+      "repo": "https://github.com/0zrk23/diet-saver"
+    },
+    {
+      "webCapture": "https://placehold.co/1903x935?text=Coming+Soon!",
+      "title": "Coming Soon!",
+      "description": "",
+      "technologyUsed": [""],
+      "app": "",
+      "repo": ""
+    },
+    {
+      "webCapture": "https://placehold.co/1903x935?text=Coming+Soon!",
+      "title": "Coming Soon!",
+      "description": "",
+      "technologyUsed": [""],
+      "app": "",
+      "repo": ""
+    },
+    {
+      "webCapture": "https://placehold.co/1903x935?text=Coming+Soon!",
+      "title": "Coming Soon!",
+      "description": "",
+      "technologyUsed": [""],
+      "app": "",
+      "repo": ""
+    },
+    {
+      "webCapture": "https://placehold.co/1903x935?text=Coming+Soon!",
+      "title": "Coming Soon!",
+      "description": "",
+      "technologyUsed": [""],
+      "app": "",
+      "repo": ""
+    },
+    {
+      "webCapture": "https://placehold.co/1903x935?text=Coming+Soon!",
+      "title": "Coming Soon!",
+      "description": "",
+      "technologyUsed": [""],
+      "app": "",
+      "repo": ""
+    }
+]

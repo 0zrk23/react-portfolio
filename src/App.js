@@ -1,13 +1,15 @@
 // import { Home, Route } from "@mui/icons-material";
-import { Routes, Route } from "react-router-dom";
+// import { Routes, Route } from "react-router-dom";
 import Navbar from "./Components/Navbar/Navbar";
-import { Home } from "./pages/Home/Home";
-import { About } from "./pages/About";
-import { Contact } from "./pages/Contact";
+import { Layout } from "./pages/Layout/Layout";
+// import { About } from "./pages/About";
+// import { Contact } from "./pages/Contact";
 // import {Home,About,Contact} from "./pages"
 import { ThemeProvider } from "@emotion/react";
 import { createTheme, CssBaseline } from "@mui/material";
+// import { AnimatePresence } from "framer-motion";
 // import { Home } from "./pages/Home/Home";
+
 
 
 
@@ -37,11 +39,7 @@ function App() {
     <ThemeProvider theme={theme}>
       <CssBaseline/>
       <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />}/>
-        <Route path="/About" element={<About />}/>
-        <Route path="/Contact" element={<Contact />}/>
-      </Routes>
+      <Layout/>
     </ThemeProvider>
   );
 }
