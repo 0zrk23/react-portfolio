@@ -1,4 +1,4 @@
-import * as React from 'react';
+
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -10,14 +10,19 @@ import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faNetworkWired } from '@fortawesome/free-solid-svg-icons';
 import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
+import { useState } from 'react';
 import Morf from '../Morf/NavbarMorf';
-// import { Link } from 'react-scroll';
+import { Link } from 'react-scroll';
 
 const linkStyle = {textDecoration: 'none', color: '#273c6d'}
+
+const scrollOffset = -69;
+
+const scrollDuration = 1000;
 
 const pages = ['Home', 'Work', 'About','Contact'];
 // const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
@@ -29,9 +34,9 @@ const linkUrl = [
 const networkIcons = [faLinkedin,faGithub];
 
 function Navbar() {
-  const [anchorElNav, setAnchorElNav] = React.useState(null);
+  const [anchorElNav, setAnchorElNav] = useState(null);
   // const [anchorElUser, setAnchorElUser] = React.useState(null);
-  const [anchorElNetwork, setAnchorElNetwork] = React.useState(null);
+  const [anchorElNetwork, setAnchorElNetwork] = useState(null);
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
@@ -58,7 +63,7 @@ function Navbar() {
   }
 
   return (
-    <AppBar position="sticky">
+    <AppBar position="fixed">
       <Container maxWidth="2xl" >
         <Toolbar disableGutters >
           {/* <AdbIcon color='color3'  sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} /> */}
@@ -119,7 +124,7 @@ function Navbar() {
               }}
             >
               {pages.map((page,key) => (
-                <Link key={`${key}`} style={linkStyle} to={page !== 'Home'? `/${page}`:'/'}>
+                <Link key={`${key}`} style={linkStyle} to={`${page}`} spy={true} smooth={true} offset={scrollOffset+15} duration={scrollDuration}>
                     <MenuItem key={page} onClick={handleCloseNavMenu}>
                         <Typography textAlign="center" color='color3'>{page}</Typography>
                     </MenuItem>
@@ -139,7 +144,6 @@ function Navbar() {
             variant="h5"
             noWrap
             component="a"
-            href=""
             sx={{
               mr: 2,
               display: { xs: 'flex', md: 'none' },
@@ -155,22 +159,15 @@ function Navbar() {
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page,key) => (
-                
+                <Link key={page} style={linkStyle} to={`${page}`} spy={true} smooth={true} offset={scrollOffset} duration={scrollDuration}>
                     <Button
-                        key={page}
                         onClick={handleCloseNavMenu}
                         sx={{ my: 2, display: 'block' }}
                         color='color3'
-                    >
-                        {/* <Link key={`${key}`} style={linkStyle} to={page !== 'Home'? `/${page}`:'/'}>
+                    >          
                           {page}
-                        </Link> */}
-                        <a key={key} style={linkStyle} href={console.log(`#${page.toLocaleLowerCase()}`)}>
-                          {page}
-                        </a>
                     </Button>
-                
-                
+                </Link>
             ))}
           </Box>
   

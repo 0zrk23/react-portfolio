@@ -1,9 +1,10 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faUtensils } from "@fortawesome/free-solid-svg-icons";
-import { Typography } from "@mui/material";
+import { faCircleXmark } from "@fortawesome/free-solid-svg-icons";
+import { Button } from "@mui/material";
 import { motion } from "framer-motion";
 import { Backdrop } from "../Backdrop/Backdrop";
 import "./workmodal.scss"
+// import { Twisty } from "../Twisty/Twisty";
 
 const dropIn = {
   hidden: {
@@ -22,11 +23,18 @@ const dropIn = {
   },
   exit: {
     y: "100vh",
-    opactiy: 0
+    opactiy: 0,
+    transition:{
+      duration: 0.1
+    }
   }
 }
 
+// const rotation=10;
+// const duration=5;
+
 export const WorkModal = ({handleClose, work}) => {
+  // let screenWidth = window.innerWidth;
   return (
     <Backdrop onClick={handleClose}>
       <motion.div
@@ -38,10 +46,12 @@ export const WorkModal = ({handleClose, work}) => {
         exit='exit'
       >
         <div className="title-container">
-          <motion.div>
-            <FontAwesomeIcon className='title-icon' icon={faUtensils} style={{padding: '1.5rem 1.5rem 0 0', fontSize: '30px', color: "white"}}/>
-          </motion.div>
-          <Typography
+          {/* <div className='title-icon'>
+            <Twisty rotation={rotation} duration={duration}>
+              {work.description && <FontAwesomeIcon icon={faUtensils} style={{ fontSize: '30px', color: "white"}}/>}
+            </Twisty>
+          </div> */}
+          <h3
             className="work-title"
             variant="h3"
             sx={{
@@ -49,12 +59,36 @@ export const WorkModal = ({handleClose, work}) => {
             }}
           >
             {work.title}
-          </Typography>
-          <motion.div>
-            <FontAwesomeIcon className='title-icon' icon={faUtensils} style={{padding: '1.5rem 1.5rem 0 1.5rem', fontSize: '30px', color: "white"}}/>
-          </motion.div>
+          </h3>
+          
+          {/* <div className='title-icon'>
+            <Twisty rotation={-rotation} duration={duration}>
+              {work.description && <FontAwesomeIcon icon={faUtensils} style={{ fontSize: '30px', color: "white"}}/>}
+            </Twisty>
+          </div> */}
         </div>
-        <button onClick={handleClose}>Close</button>
+        {
+          work.description && 
+            <>
+              <p className='work-description'>
+                {work.description}
+              </p>
+              <p className='work-technology'>
+                <span style={{fontWeight: 'bolder', textDecorationLine: 'underline'}}>Technology Used:</span>
+                {' ' + work.technologyUsed.join(', ')}
+              </p>
+              <div className="button-container">
+                <Button onClick={handleClose} href={`${work.repo}`} target='_blank' sx={{mx: 1}} variant="outlined">
+                  Visit Repo
+                </Button>
+                <Button onClick={handleClose} href={`${work.app}`} target='_blank' sx={{mx: 1}} variant="outlined">
+                  Visit Web App
+                </Button>
+              </div>
+              
+            </>
+        }
+        <FontAwesomeIcon className="delete-icon" onClick={handleClose} icon={faCircleXmark} style={{ fontSize: '30px', color: "white"}}/>
       </motion.div>
     </Backdrop>
   )

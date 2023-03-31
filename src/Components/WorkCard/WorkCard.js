@@ -1,11 +1,12 @@
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import './workcard.scss'
 import { useState } from "react";
 import { WorkModal } from "../WorkModal/WorkModal";
+import { AnimatePresence } from "framer-motion";
 
 const cardVariants = {
   initial:{
-    scale: 0.95,
+    scale: 0.97,
     opacity: 0.75
   },
   hover:{
@@ -16,7 +17,7 @@ const cardVariants = {
     }
   },
   tap:{
-    scale: 0.9,
+    scale: 0.95,
     opacity: 1,
   }
 }

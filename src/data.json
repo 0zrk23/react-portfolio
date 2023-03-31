@@ -2,42 +2,42 @@
     {
       "webCapture": "./work/my-menu.png",
       "title": "My Menu",
-      "description": "This web application can search for a recipe and saves recipies to a user when logged in",
+      "description": "My Menu is desigend search, find and save recipies. It also has search parameters so a user can filter out undesired recipes",
       "technologyUsed": ["Sequelize","MySQL","Express","Express-Handlebars"],
       "app": "https://my-menu.herokuapp.com/",
       "repo": "https://github.com/0zrk23/diet-saver"
     },
     {
-      "webCapture": "https://placehold.co/1903x935?text=Coming+Soon!",
-      "title": "Coming Soon!",
-      "description": "",
-      "technologyUsed": [""],
-      "app": "",
-      "repo": ""
+      "webCapture": "./work/tech-blogger.png",
+      "title": "Tech Blogger",
+      "description": "Tech Blogger allows users to write blogs and commment on any blog as well. This app was designed to show off my ability to have a backend with a database",
+      "technologyUsed": ["Sequelize","MySQL","Express","Express-Handlebars"],
+      "app": "https://tech-blogger-production.up.railway.app/",
+      "repo": "https://github.com/0zrk23/tech-blogger"
     },
     {
-      "webCapture": "https://placehold.co/1903x935?text=Coming+Soon!",
-      "title": "Coming Soon!",
-      "description": "",
-      "technologyUsed": [""],
-      "app": "",
-      "repo": ""
+      "webCapture": "./work/note-taker.png",
+      "title": "Note Taker",
+      "description": "Note Taker is designed to be a simple way to take notes. This app uses RESTfull routes for its back end, thought it stores notes client-side",
+      "technologyUsed": ["Express","JavaScript","Bootstrap"],
+      "app": "https://note-taker-production-6e0a.up.railway.app/",
+      "repo": "https://github.com/0zrk23/note-taker"
     },
     {
-      "webCapture": "https://placehold.co/1903x935?text=Coming+Soon!",
-      "title": "Coming Soon!",
-      "description": "",
-      "technologyUsed": [""],
-      "app": "",
-      "repo": ""
+      "webCapture": "./work/5-day-forcast.png",
+      "title": "5 Day",
+      "description": "5 Day gives you a 5 day weather forcast for the city a user searches and will render the weather for today and the next 5 days. ",
+      "technologyUsed": ["JavaScript","HTML","TailwindCSS"],
+      "app": "https://0zrk23.github.io/5-day-weather-forcast/",
+      "repo": "https://github.com/0zrk23/5-day-weather-forcast"
     },
     {
-      "webCapture": "https://placehold.co/1903x935?text=Coming+Soon!",
-      "title": "Coming Soon!",
-      "description": "",
-      "technologyUsed": [""],
-      "app": "",
-      "repo": ""
+      "webCapture": "./work/cure-your-boredom.png",
+      "title": "Cure Your Boredom",
+      "description": "Cure Your Boredom will generate a joke or an activity based on citeria a user give it. Your favorite of each kind will be saved as well ",
+      "technologyUsed": ["JavaScript","HTML","MaterializeCSS"],
+      "app": "https://0zrk23.github.io/cure-for-bordom/",
+      "repo": "https://github.com/0zrk23/cure-for-bordom"
     },
     {
       "webCapture": "https://placehold.co/1903x935?text=Coming+Soon!",
