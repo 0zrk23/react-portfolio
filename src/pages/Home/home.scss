@@ -9,11 +9,14 @@ $color5: #477CC3;
 .home{
   display: flex;
   flex-direction: column;
+  // dispay
   // align-items: center;
   // justify-content: center;
   background: linear-gradient(to bottom right, $secondary,$color5);
-  padding-left: 10px;
-  height: 85vh;
+  // padding-left: 10px;
+  height: 100vh;
+  padding-top: 10vh;
+  box-shadow: 5px 5px 8px 0px rgba(0, 0, 0, 0.387);
 }
 
 .text-container{
@@ -26,7 +29,7 @@ $color5: #477CC3;
   // height: 750px;
   // border: 1px dashed black;
   // margin-left: 10px
-  padding-left: 10px;
+  padding-left: 0px;
   // opacity: 0;
 }
 
@@ -49,6 +52,19 @@ $color5: #477CC3;
   // border: 1px dashed black;
 }
 
+.home-footer{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 7vh
+}
+
+.home-footer-text{
+  color: $color3;
+  padding-top: 1rem;
+}
+
 @media screen and (min-width: 1200px) {
   .home{
     flex-direction: row;
@@ -64,5 +80,6 @@ $color5: #477CC3;
   }
   .text-container{
     align-items: initial;
+    padding-left: 20px;
   }
 }
