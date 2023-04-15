@@ -17,6 +17,7 @@ import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
 import { useState } from 'react';
 import Morf from '../Morf/NavbarMorf';
 import { Link } from 'react-scroll';
+import { motion } from 'framer-motion';
 
 const linkStyle = {textDecoration: 'none', color: '#273c6d'}
 
@@ -175,13 +176,19 @@ function Navbar() {
               {linkUrl.map((url,index) => {
                 return (
                   <Box sx={{mx: 1}} key={index}>
-                    <a 
+                    <motion.a 
                       href={url}
                       target="_blank"
                       rel="noreferrer"
+                      initial={{
+                        opacity: 0.8,
+                      }}
+                      whileHover={{
+                        opacity: 1,
+                      }}
                     >
                       <FontAwesomeIcon icon={networkIcons[index]} style={{fontSize: '30px', color: "#354d80"}}/>
-                    </a>
+                    </motion.a>
                   </Box>
                 )
               })}

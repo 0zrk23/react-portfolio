@@ -38,7 +38,7 @@ export default function WorkCard({work}){
         whileTap='tap'
         className="web-capture" 
         onClick={() => (modalOpen ? closeModal() : openModal()) }
-
+      
         src={`${work.webCapture}`} 
         alt=""
       />

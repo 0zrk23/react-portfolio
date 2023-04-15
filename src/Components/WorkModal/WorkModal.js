@@ -88,7 +88,22 @@ export const WorkModal = ({handleClose, work}) => {
               
             </>
         }
-        <FontAwesomeIcon className="delete-icon" onClick={handleClose} icon={faCircleXmark} style={{ fontSize: '30px', color: "white"}}/>
+        <motion.div 
+          className="delete-icon"
+          initial={{
+            scale: 1,
+            opacity: 0.7,
+          }}
+          whileHover={{
+            scale: 1.05,
+            opacity: 1,
+          }}
+          whileTap={{
+            scale: 0.95,
+          }}
+        >
+          <FontAwesomeIcon onClick={handleClose} icon={faCircleXmark} style={{cursor: 'pointer', fontSize: '30px', color: "white"}}/>
+        </motion.div>
       </motion.div>
     </Backdrop>
   )
