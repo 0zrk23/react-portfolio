@@ -29,7 +29,7 @@ export default function Morf({scale = '200px', duration = '2', color = 'white', 
         alignItems: 'center'
       }}
     >
-      <FontAwesomeIcon icon={faReact} style={{color: `${color}`, fontSize: '200px'}}></FontAwesomeIcon>
+      <FontAwesomeIcon icon={faReact} style={{cursor: 'pointer', color: `${color}`, fontSize: '200px'}}/>
     </motion.div>
   );
 }

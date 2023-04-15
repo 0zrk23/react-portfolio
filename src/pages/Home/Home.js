@@ -1,6 +1,7 @@
 import { Typography } from "@mui/material"
 import Morf from '../../Components/Morf/HomeMorf';
 import { motion } from 'framer-motion';
+import { Link } from "react-scroll";
 // import { Blink } from "../../Components/Blink/Blink";
 // import { faDownLong } from "@fortawesome/free-solid-svg-icons";
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -47,7 +48,10 @@ export const Home = () => {
             initial='initial'
             whileInView='inView'
           >
-              <Morf  scale='200px' duration='20' color='white'/>
+            <Link className='work-link' to={`Work`} spy={true} smooth={true} offset={-60} duration={1000}>
+              <Morf scale='200px' duration='20' color='white'/>
+            </Link>
+              
           </motion.div>
       </div>
       
