@@ -49,7 +49,7 @@ $color5: #477CC3;
 .work-technology{
   color: $primary;
   font-size: x-large;
-  width: min(90%, 100%)
+  width: min(90%, 100%);
 }
 
 .work-description{
@@ -71,5 +71,12 @@ $color5: #477CC3;
 @media screen and (min-width: 600px){
   .modal{
     height: min(50%, 500px);
+  }
+}
+
+@media screen and (max-width: 400px){
+  .work-description,
+  .work-technology{
+    font-size: large;
   }
 }
