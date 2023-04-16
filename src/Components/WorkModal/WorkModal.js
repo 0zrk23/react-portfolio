@@ -19,6 +19,7 @@ const dropIn = {
       type: "spring",
       damping: 25,
       stiffness: 500,
+      delay: 0.1,
     }
   },
   exit: {
