@@ -14,8 +14,8 @@ $color5: #477CC3;
   // justify-content: center;
   background: linear-gradient(to bottom right, $secondary,$color5);
   // padding-left: 10px;
-  height: 101vh;
-  padding-top: 10vh;
+  height: 94vh;
+  // padding-top: 10vh;
   box-shadow: 5px 5px 8px 0px rgba(0, 0, 0, 0.387);
 }
 
@@ -64,7 +64,6 @@ $color5: #477CC3;
   color: $color3;
   padding-top: 1rem;
 }
-
 
 @media screen and (min-width: 1200px) {
   .home{

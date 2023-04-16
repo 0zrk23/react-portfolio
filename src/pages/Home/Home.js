@@ -34,7 +34,7 @@ export const Home = () => {
           >
               <Typography sx={{fontFamily: 'monospace'}} color='primary' variant='h2'>Hello!</Typography>
               <div className='name'>
-                  <Typography sx={{fontFamily: 'monospace', marginRight: '20px'}} color='primary' variant='h3'>I'm Gustavo </Typography>
+                  <Typography sx={{fontFamily: 'monospace', marginRight: '20px', textAlign: {xs: 'center'}}} color='primary' variant='h3'>I'm Gustavo </Typography>
                   <Typography sx={{fontFamily: 'monospace'}} color='primary' variant='h3'>Carrillo</Typography>
               </div>
               <div className="description">

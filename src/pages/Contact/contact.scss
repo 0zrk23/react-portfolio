@@ -1,0 +1,57 @@
+$primary: #fcfcfc;
+$secondary: #171C42;
+$color3: #273C6D;
+$color4: #375C98;
+$color5: #477CC3;
+
+.contact{
+  margin: 3vh 0 0 0;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 1rem 3rem 1rem;
+}
+
+.contact-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.email-form{
+  width: clamp(50%, 500px, 90%);
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+.user-name,
+.email,
+.message{
+  display: grid;
+  grid-template-rows: auto auto;
+}
+
+.message,
+.button{
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+@media screen and (max-width: 950px) {
+  .contact-container{
+    grid-template-columns: auto;
+  }
+  .email-form{
+    grid-template-columns: auto;
+  }
+  .message,
+  .button{
+    grid-column-start: initial;
+    grid-column-end: initial;
+  }
+}

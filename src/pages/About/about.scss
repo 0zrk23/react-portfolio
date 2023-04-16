@@ -4,21 +4,71 @@ $color3: #273C6D;
 $color4: #375C98;
 $color5: #477CC3;
 
+$comp-cube: 200px;
+$app-cube: 100px;
+
 .about{
-  height: 100vh;
+  height: 94vh;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  gap: 1rem;
+  padding: 2rem 1rem 1rem 1rem;
+  background: linear-gradient(to bottom right, $secondary,$color5);
+  box-shadow: 5px 5px 8px 8px rgba(0, 0, 0, 0.387);
+}
+
+.cube-container,
+.about-info{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+// .cube-container{
+//   display: flex;
+//   align-items: center;
+// }
+.cube-anchor{
+  margin-bottom: 15rem;
 }
 
 .profile-pic{
   border-radius: 50%;
   width: 15rem;
   height: 15rem;
+  margin: 0 0 2rem 0;
+}
+
+.description-container{
+  width: clamp(75%, 500px, 90%)
+}
+
+.languages{
+  display: none;
+}
+
+.icon1,
+.icon2{
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 35px;
+  // margin-bottom: 3rem;
+}
+
+.icon1{
+  height: 50px;
+  width: 50px;
 }
 
 .cubespinner {
+  // position: absolute;
   animation-name: spincube;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
-  animation-duration: 12s;
+  animation-duration: 15s;
   transform-style: preserve-3d;
   transform-origin: 100px 100px 0;
   margin-left: calc(50% - 100px);
@@ -28,12 +78,23 @@ $color5: #477CC3;
       width: 200px;
       height: 200px;
       border: 1px solid #ccc;
-      background: rgba(255, 255, 255, 0.4);
+      background: rgb(183, 183, 183);
       justify-content: center;
-      font-size: 100px;
+      font-size: 120px;
       display: flex;
       align-items: center;
-      box-shadow: 0 0 20px 0px lightgray;
+      // box-shadow: 0 0 20px 0px lightgray;
+  }
+
+  img{
+      position: absolute;
+      width: 200px;
+      height: 200px;
+      border: 1px solid #ccc;
+      background: rgb(183, 183, 183);
+      justify-content: center;
+      display: flex;
+      align-items: center;
   }
 
   .face1 {
@@ -81,5 +142,64 @@ $color5: #477CC3;
   }
   83% {
     transform: rotateX(90deg);
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .about{
+    grid-template-columns: auto;
+  }
+  .cube-anchor{
+    margin-bottom: 10rem;
+  }
+  .cubespinner{
+    transform-origin: calc($app-cube/2) calc($app-cube/2) 0;
+    margin-left: calc(50% - calc($app-cube/2));
+    div{
+      width: $app-cube;
+      height: $app-cube;
+      font-size: 58px;
+    }
+    img{
+      width: $app-cube;
+      height: $app-cube;
+  }
+    .face1 {
+      transform: translateZ(calc($app-cube/2));;
+    }
+    .face2 {
+      transform: rotateY(90deg) translateZ(calc($app-cube/2));
+    }
+    .face3 {
+      transform: rotateY(90deg) rotateX(90deg) translateZ(calc($app-cube/2));
+    }
+    .face4 {
+      transform: rotateY(180deg) rotateZ(90deg) translateZ(calc($app-cube/2));
+    }
+    .face5 {
+      transform: rotateY(-90deg) rotateZ(90deg) translateZ(calc($app-cube/2));
+    }
+    .face6 {
+      transform: rotateX(-90deg) translateZ(calc($app-cube/2));
+    }
+  }
+}
+
+@media screen and (max-width: 760px){
+  .cube-container{
+    display: none;
+  }
+  .languages{
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto;
+  }
+}
+
+@media screen and (max-width: 350){
+  .languages{
+
   }
 }
