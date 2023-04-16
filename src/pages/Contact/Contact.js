@@ -10,12 +10,10 @@ export const Contact = () => {
     e.preventDefault();
     
     try{
-        console.log(process.env.REACT_APP_PUBLIC_KEY)
-        // const response = await emailjs.sendForm(process.env.SERVICE_ID, process.env.TEMPLATE_ID, form.current, process.env.PUBLIC_KEY)
-        // console.log(response.text);
-        // form.current.children[0].children[1].value = ''
-        // form.current.children[1].children[1].value = ''
-        // form.current.children[2].children[1].value = ''
+        const response = await emailjs.sendForm(process.env.REACT_APP_SERVICE_ID, process.env.REACT_APP_TEMPLATE_ID, form.current, process.env.REACT_APP_PUBLIC_KEY)
+        form.current.children[0].children[1].value = ''
+        form.current.children[1].children[1].value = ''
+        form.current.children[2].children[1].value = ''
     } catch (error){
         console.log(error);
     }
